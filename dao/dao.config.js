@@ -1,5 +1,5 @@
 const sqlite3 = require('sqlite3').verbose();
-const dbPath = "./crescendoemcristo.db"
+const dbPath = "./dao/crescendoemcristo.db"
 
 class DAO {
     constructor() {
