@@ -11,7 +11,9 @@ class DAO {
                 `CREATE TABLE IF NOT EXISTS usuarios (
                     nome text not null,
                     usuario text not null,
-                    senha text not null
+                    senha text not null,
+                    cookies text,
+                    cookieExpiry
                 );`
             )
 
