@@ -13,7 +13,7 @@ class DAO {
                     usuario text not null,
                     senha text not null,
                     cookies text,
-                    cookieExpiry
+                    cookieExpiry text
                 );`
             )
 

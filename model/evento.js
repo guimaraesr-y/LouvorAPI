@@ -1,17 +1,17 @@
-const Dao = require('../dao/dao.config');
+const res = require('express/lib/response');
+const EventoDAO = require('../dao/evento.dao')
 
 class Evento {
     constructor() {
         this.titulo = '';
         this.data = '';
         this.horario = '';
+        this.dao = new EventoDAO();
     }
 
     carregarEventos() {
-        let dao = new Dao();
         return new Promise((resolve, reject) => {
-            dao.all("SELECT * FROM eventos").then(data => {
-                dao.close();
+            this.dao.carregarEventos().then(data => {
                 resolve(data);
             })
         })
